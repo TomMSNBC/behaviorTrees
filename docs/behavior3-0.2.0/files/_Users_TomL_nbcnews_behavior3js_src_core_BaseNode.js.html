@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css/yui-cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
+    <script src="../assets/js/yui-source.js"></script>
+	<title>Behavior3JS - /Users/TomL/nbcnews/behavior3js/src/core/BaseNode.js - API Documentation</title>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><a href=""><img src="../assets/css/logo.png" title=""></a></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Documentation for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+  <h2 class="off-left">APIs</h2>
+  <div id="api-tabview" class="tabview">
+    
+
+    <div id="api-tabview-filter">
+        <input type="search" id="api-filter" placeholder="Type to filter APIs">
+    </div>
+
+    <div id="api-tabview-panel">
+      <ul class="api-modules">
+        
+          <li><a class="mtitle" href="../modules/b3.html">b3</a>
+            <ul class="api-classes">
+              
+                
+                  <li><a class="ctitle" href="../classes/Action.html">Action</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/BaseNode.html">BaseNode</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/BehaviorTree.html">BehaviorTree</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Blackboard.html">Blackboard</a></li>
+                
+              
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Composite.html">Composite</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Condition.html">Condition</a></li>
+                
+              
+                
+              
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Decorator.html">Decorator</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Error.html">Error</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Failer.html">Failer</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Inverter.html">Inverter</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Limiter.html">Limiter</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/MaxTime.html">MaxTime</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/MemPriority.html">MemPriority</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Priority.html">Priority</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Repeater.html">Repeater</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/RepeatUntilFailure.html">RepeatUntilFailure</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/RepeatUntilSuccess.html">RepeatUntilSuccess</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Runner.html">Runner</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Sequence.html">Sequence</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Succeeder.html">Succeeder</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Tick.html">Tick</a></li>
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Wait.html">Wait</a></li>
+                
+              
+            </ul>
+          </li>
+        
+          <li><a class="mtitle" href="../modules/constants.html">constants</a>
+            <ul class="api-classes">
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/constants.html">constants</a></li>
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </ul>
+          </li>
+        
+          <li><a class="mtitle" href="../modules/functions.html">functions</a>
+            <ul class="api-classes">
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/Class.html">Class</a></li>
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <li><a class="ctitle" href="../classes/createUUID.html">createUUID</a></li>
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </ul>
+          </li>
+        
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+            <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <script>
+	var name = /Users/TomL/nbcnews/behavior3js/src/core/BaseNode.js      
+</script>
+<h1 class="file-heading">File:BaseNode.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+(function() {
+  &quot;use strict&quot;;
+
+  /**
+   * The BaseNode class is used as super class to all nodes in BehaviorJS. It 
+   * comprises all common variables and methods that a node must have to 
+   * execute.
+   *
+   * **IMPORTANT:** Do not inherit from this class, use &#x60;b3.Composite&#x60;, 
+   * &#x60;b3.Decorator&#x60;, &#x60;b3.Action&#x60; or &#x60;b3.Condition&#x60;, instead.
+   *
+   * The attributes are specially designed to serialization of the node in a 
+   * JSON format. In special, the &#x60;parameters&#x60; attribute can be set into the 
+   * visual editor (thus, in the JSON file), and it will be used as parameter 
+   * on the node initialization at &#x60;BehaviorTree.load&#x60;.
+   * 
+   * BaseNode also provide 5 callback methods, which the node implementations 
+   * can override. They are &#x60;enter&#x60;, &#x60;open&#x60;, &#x60;tick&#x60;, &#x60;close&#x60; and &#x60;exit&#x60;. See 
+   * their documentation to know more. These callbacks are called inside the 
+   * &#x60;_execute&#x60; method, which is called in the tree traversal.
+   * 
+   * @module b3
+   * @class BaseNode
+  **/
+  b3.BaseNode = b3.Class(null, {
+
+    /**
+     * Node ID.
+     * @property {string} id
+     * @readonly
+    **/
+    id: null,
+
+    /**
+     * Node name. Must be a unique identifier, preferable the same name of the 
+     * class. You have to set the node name in the prototype.
+     *
+     * @property {String} name
+     * @readonly
+    **/
+    name: null,
+
+    /**
+     * Node category. Must be &#x60;b3.COMPOSITE&#x60;, &#x60;b3.DECORATOR&#x60;, &#x60;b3.ACTION&#x60; or 
+     * &#x60;b3.CONDITION&#x60;. This is defined automatically be inheriting the 
+     * correspondent class.
+     *
+     * @property {CONSTANT} category
+     * @readonly
+    **/
+    category: null,
+
+    /**
+     * Node title.
+     * @property {String} title
+     * @optional
+     * @readonly
+    **/
+    title: null,
+
+    /**
+     * Node description.
+     * @property {String} description
+     * @optional
+     * @readonly
+    **/
+    description: null,
+
+    /**
+     * A dictionary (key, value) describing the node parameters. Useful for 
+     * defining parameter values in the visual editor. Note: this is only 
+     * useful for nodes when loading trees from JSON files.
+     *
+     * **Deprecated since 0.2.0. This is too similar to the properties 
+     * attribute, thus, this attribute is deprecated in favor to 
+     * &#x60;properties&#x60;.**
+     *
+     * @property {Object} parameters
+     * @deprecated since 0.2.0.
+     * @readonly
+    **/
+    parameters: null,
+
+    /**
+     * A dictionary (key, value) describing the node properties. Useful for 
+     * defining custom variables inside the visual editor.
+     *
+     * @property properties
+     * @type {Object}
+     * @readonly
+    **/
+    properties: null,
+
+    /**
+     * Initialization method.
+     * @method initialize
+     * @constructor
+    **/
+    initialize: function(params) {
+      this.id          = b3.createUUID();
+      this.title       = this.title || this.name;
+      this.description = &#x27;&#x27;;
+      this.parameters  = {};
+      this.properties  = {};
+    },
+
+    /**
+     * This is the main method to propagate the tick signal to this node. This 
+     * method calls all callbacks: &#x60;enter&#x60;, &#x60;open&#x60;, &#x60;tick&#x60;, &#x60;close&#x60;, and 
+     * &#x60;exit&#x60;. It only opens a node if it is not already open. In the same 
+     * way, this method only close a node if the node  returned a status 
+     * different of &#x60;b3.RUNNING&#x60;.
+     *
+     * @method _execute
+     * @param {Tick} tick A tick instance.
+     * @return {Constant} The tick state.
+     * @protected
+    **/
+    _execute: function(tick) {
+      // ENTER 
+      this._enter(tick);
+
+      // OPEN 
+      if (!tick.blackboard.get(&#x27;isOpen&#x27;, tick.tree.id, this.id)) {
+          this._open(tick);
+      }
+
+      // TICK 
+      var status = this._tick(tick);
+
+      // CLOSE 
+      if (status !== b3.RUNNING) {
+          this._close(tick);
+      }
+
+      // EXIT 
+      this._exit(tick);
+
+      return status;
+    },
+
+    /**
+     * Wrapper for enter method.
+     * @method _enter
+     * @param {Tick} tick A tick instance.
+     * @protected
+    **/
+    _enter: function(tick) {
+      tick._enterNode(this);
+      this.enter(tick);
+    },
+
+    /**
+     * Wrapper for open method.
+     * @method _open
+     * @param {Tick} tick A tick instance.
+     * @protected
+    **/
+    _open: function(tick) {
+      tick._openNode(this);
+      tick.blackboard.set(&#x27;isOpen&#x27;, true, tick.tree.id, this.id);
+      this.open(tick);
+    },
+
+    /**
+     * Wrapper for tick method.
+     * @method _tick
+     * @param {Tick} tick A tick instance.
+     * @return {Constant} A state constant.
+     * @protected
+    **/
+    _tick: function(tick) {
+      tick._tickNode(this);
+      return this.tick(tick);
+    },
+
+    /**
+     * Wrapper for close method.
+     * @method _close
+     * @param {Tick} tick A tick instance.
+     * @protected
+    **/
+    _close: function(tick) {
+      tick._closeNode(this);
+      tick.blackboard.set(&#x27;isOpen&#x27;, false, tick.tree.id, this.id);
+      this.close(tick);
+    },
+
+    /**
+     * Wrapper for exit method.
+     * @method _exit
+     * @param {Tick} tick A tick instance.
+     * @protected
+    **/
+    _exit: function(tick) {
+      tick._exitNode(this);
+      this.exit(tick);
+    },
+
+    /**
+     * Enter method, override this to use. It is called every time a node is 
+     * asked to execute, before the tick itself.
+     *
+     * @method enter
+     * @param {Tick} tick A tick instance.
+    **/
+    enter: function(tick) {},
+
+    /**
+     * Open method, override this to use. It is called only before the tick 
+     * callback and only if the not isn&#x27;t closed.
+     *
+     * Note: a node will be closed if it returned &#x60;b3.RUNNING&#x60; in the tick.
+     *
+     * @method open
+     * @param {Tick} tick A tick instance.
+    **/
+    open: function(tick) {},
+
+    /**
+     * Tick method, override this to use. This method must contain the real 
+     * execution of node (perform a task, call children, etc.). It is called
+     * every time a node is asked to execute.
+     *
+     * @method tick
+     * @param {Tick} tick A tick instance.
+    **/
+    tick: function(tick) {},
+
+    /**
+     * Close method, override this to use. This method is called after the tick
+     * callback, and only if the tick return a state different from 
+     * &#x60;b3.RUNNING&#x60;.
+     *
+     * @method close
+     * @param {Tick} tick A tick instance.
+    **/
+    close: function(tick) {},
+
+    /**
+     * Exit method, override this to use. Called every time in the end of the 
+     * execution.
+     *
+     * @method exit
+     * @param {Tick} tick A tick instance.
+    **/
+    exit: function(tick) {},
+  });
+
+})();
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "name": "behavior3js",
+  "version": "0.2.0",
+  "description": "Behavior3 client library for Javascript (Behavior Trees for Javascript)",
+  "main": "libs/behavior3-0.2.0.min.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+    "scripts": {
+    "build": "gulp",
+    "pretest": "gulp",
+    "test": "mocha --recursive --compilers js:babel/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/behavior3/behavior3js.git"
+  },
+  "keywords": [
+    "behavior",
+    "tree",
+    "behavior tree",
+    "ai",
+    "artificial intelligence",
+    "behavior3",
+    "b3",
+    "game dev",
+    "gameai"
+  ],
+  "author": "Renato Pereira <renato.ppontes@gmail.com> (http://guineashots.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/behavior3/behavior3js/issues"
+  },
+  "homepage": "https://behavior3.com",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-yuidoc": "^0.1.2",
+    "gulp-zip": "^3.0.2",
+    "jshint-stylish": "^2.0.1",
+    "babel": "^5.8.20",
+    "chai": "^3.2.0",
+    "gulp": "^3.9.0",
+    "lolex": "^1.2.2",
+    "mocha": "^2.2.5",
+    "sinon": "^1.15.4"
+  }
+}
