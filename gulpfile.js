@@ -28,10 +28,26 @@ gulp.task('scripts', function () {
     .pipe(gulp.dest('dist'));
 });
 
+/*
+// babel
 gulp.task('watch', function() {
     gulp.watch(paths,['scripts']);
 })
+*/
 
+var testpaths = [
+'./tests/**/*.html',
+'./tests/**/*.js'
+];
+
+gulp.task('html', function () {
+  gulp.src(testpaths)
+    .pipe(connect.reload());
+});
+
+gulp.task('watch', function() {
+    gulp.watch(testpaths,['html']);
+})
 
 /**
  * Apply jshint to the source and print results on terminal.
