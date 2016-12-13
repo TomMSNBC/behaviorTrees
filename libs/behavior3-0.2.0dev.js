@@ -996,7 +996,6 @@ var p = BehaviorTree.prototype;
         tick.target     = target;
         tick.blackboard = blackboard;
         tick.tree       = this;
-
         /* TICK NODE */
         var state = this.root._execute(tick);
 
