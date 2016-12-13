@@ -5,8 +5,8 @@
     "display": {
         "camera_x": 671,
         "camera_y": 399.5,
-        "camera_z": 1,
-        "x": 0,
+        "camera_z": 0.75,
+        "x": -64,
         "y": 0
     },
     "properties": {},
@@ -17,13 +17,16 @@
             "title": "Priority",
             "description": "",
             "display": {
-                "x": 80,
+                "x": 32,
                 "y": 0
             },
             "parameters": {},
             "properties": {},
             "children": [
-                "fce4bb44-4686-4a32-852a-af2bb3b22d0c"
+                "fce4bb44-4686-4a32-852a-af2bb3b22d0c",
+                "4713ed67-9558-421a-8ae0-a64be0534e5f",
+                "0ec8572c-a034-459b-a58d-679c2115a3a6",
+                "26087087-f342-453b-880f-bf96bca59234"
             ]
         },
         "fce4bb44-4686-4a32-852a-af2bb3b22d0c": {
@@ -32,8 +35,8 @@
             "title": "Sequence",
             "description": "",
             "display": {
-                "x": 160,
-                "y": -48
+                "x": 144,
+                "y": -96
             },
             "parameters": {},
             "properties": {},
@@ -48,8 +51,8 @@
             "title": "IsPauseClicked",
             "description": "",
             "display": {
-                "x": 288,
-                "y": -80
+                "x": 304,
+                "y": -144
             },
             "parameters": {},
             "properties": {}
@@ -60,8 +63,128 @@
             "title": "SwitchToPlay",
             "description": "",
             "display": {
-                "x": 288,
-                "y": 0
+                "x": 304,
+                "y": -48
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "4713ed67-9558-421a-8ae0-a64be0534e5f": {
+            "id": "4713ed67-9558-421a-8ae0-a64be0534e5f",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 144,
+                "y": 112
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "46f26b0e-3141-489b-b1dc-3fdaa209777c",
+                "52c8916b-22f5-4aef-b6ec-a8a77c982d0a"
+            ]
+        },
+        "46f26b0e-3141-489b-b1dc-3fdaa209777c": {
+            "id": "46f26b0e-3141-489b-b1dc-3fdaa209777c",
+            "name": "IsPlayClicked",
+            "title": "IsPlayClicked",
+            "description": "",
+            "display": {
+                "x": 304,
+                "y": 64
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "52c8916b-22f5-4aef-b6ec-a8a77c982d0a": {
+            "id": "52c8916b-22f5-4aef-b6ec-a8a77c982d0a",
+            "name": "SwitchToPause",
+            "title": "SwitchToPause",
+            "description": "",
+            "display": {
+                "x": 304,
+                "y": 160
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "0ec8572c-a034-459b-a58d-679c2115a3a6": {
+            "id": "0ec8572c-a034-459b-a58d-679c2115a3a6",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 144,
+                "y": 256
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "9de2acc2-25e2-422c-8210-4d3e3a5e8dff",
+                "7c65fb11-8127-45e5-a3f7-c5a8875e975e"
+            ]
+        },
+        "9de2acc2-25e2-422c-8210-4d3e3a5e8dff": {
+            "id": "9de2acc2-25e2-422c-8210-4d3e3a5e8dff",
+            "name": "IsFullScreenClicked",
+            "title": "IsFullScreenClicked",
+            "description": "",
+            "display": {
+                "x": 304,
+                "y": 224
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "7c65fb11-8127-45e5-a3f7-c5a8875e975e": {
+            "id": "7c65fb11-8127-45e5-a3f7-c5a8875e975e",
+            "name": "SwitchToFullScreen",
+            "title": "SwitchToFullScreen",
+            "description": "",
+            "display": {
+                "x": 320,
+                "y": 336
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "26087087-f342-453b-880f-bf96bca59234": {
+            "id": "26087087-f342-453b-880f-bf96bca59234",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 144,
+                "y": 448
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "37411a03-5ff6-4dc7-a426-cbedb7003d1d",
+                "ab205bbb-4b40-402f-8a97-a3fb8f445230"
+            ]
+        },
+        "ab205bbb-4b40-402f-8a97-a3fb8f445230": {
+            "id": "ab205bbb-4b40-402f-8a97-a3fb8f445230",
+            "name": "TurnOnCC",
+            "title": "TurnOnCC",
+            "description": "",
+            "display": {
+                "x": 320,
+                "y": 496
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "37411a03-5ff6-4dc7-a426-cbedb7003d1d": {
+            "id": "37411a03-5ff6-4dc7-a426-cbedb7003d1d",
+            "name": "IsCCClicked",
+            "title": "IsCCClicked",
+            "description": "",
+            "display": {
+                "x": 320,
+                "y": 416
             },
             "parameters": {},
             "properties": {}
@@ -76,6 +199,36 @@
         {
             "name": "SwitchToPlay",
             "title": "SwitchToPlay",
+            "category": "action"
+        },
+        {
+            "name": "IsPlayClicked",
+            "title": "IsPlayClicked",
+            "category": "condition"
+        },
+        {
+            "name": "SwitchToPause",
+            "title": "SwitchToPause",
+            "category": "action"
+        },
+        {
+            "name": "IsFullScreenClicked",
+            "title": "IsFullScreenClicked",
+            "category": "condition"
+        },
+        {
+            "name": "IsCCClicked",
+            "title": "IsCCClicked",
+            "category": "condition"
+        },
+        {
+            "name": "SwitchToFullScreen",
+            "title": "SwitchToFullScreen",
+            "category": "action"
+        },
+        {
+            "name": "TurnOnCC",
+            "title": "TurnOnCC",
             "category": "action"
         }
     ]
