@@ -1,0 +1,314 @@
+{
+    "title": "Unit Tree",
+    "description": "",
+    "root": "dfba9c44-461f-4d9b-826e-ec8acc8eaa5d",
+    "display": {
+        "camera_x": 531,
+        "camera_y": 469.5,
+        "camera_z": 0.75,
+        "x": -128,
+        "y": 0
+    },
+    "properties": {},
+    "nodes": {
+        "ee24f6b7-dd33-4263-9dc8-038dc713321a": {
+            "id": "ee24f6b7-dd33-4263-9dc8-038dc713321a",
+            "name": "AmIBored",
+            "title": "Am I bored?",
+            "description": "",
+            "display": {
+                "x": 496,
+                "y": 206
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "2201a74b-e08e-40d8-9730-b50867c7b468": {
+            "id": "2201a74b-e08e-40d8-9730-b50867c7b468",
+            "name": "MoveToRandom",
+            "title": "Move to random position",
+            "description": "",
+            "display": {
+                "x": 496,
+                "y": 270
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "937dcc4d-5672-4940-bcbc-a76eaff857f6": {
+            "id": "937dcc4d-5672-4940-bcbc-a76eaff857f6",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 288,
+                "y": 238
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "ee24f6b7-dd33-4263-9dc8-038dc713321a",
+                "2201a74b-e08e-40d8-9730-b50867c7b468"
+            ]
+        },
+        "dfba9c44-461f-4d9b-826e-ec8acc8eaa5d": {
+            "id": "dfba9c44-461f-4d9b-826e-ec8acc8eaa5d",
+            "name": "Priority",
+            "title": "Priority",
+            "description": "",
+            "display": {
+                "x": 80,
+                "y": 0
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "960e52dc-0214-492f-8e4a-5bd35cdfffb0",
+                "dae599e4-88e7-4615-8262-54cc03936faa",
+                "8568e078-d626-48af-8f03-437f3fbaade2",
+                "937dcc4d-5672-4940-bcbc-a76eaff857f6"
+            ]
+        },
+        "43bbdc1e-5ec8-4993-85c9-157d7a3af1e7": {
+            "id": "43bbdc1e-5ec8-4993-85c9-157d7a3af1e7",
+            "name": "HavaIATarget",
+            "title": "Have I a target?",
+            "description": "",
+            "display": {
+                "x": 496,
+                "y": -370
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "cea4e7a6-bad0-4ef6-88bb-26b2f166f547": {
+            "id": "cea4e7a6-bad0-4ef6-88bb-26b2f166f547",
+            "name": "CanIAttackTarget",
+            "title": "Can I attack target?",
+            "description": "",
+            "display": {
+                "x": 912,
+                "y": -306
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "8ba0210e-e3f3-49e8-a1f8-303c3876ebbe": {
+            "id": "8ba0210e-e3f3-49e8-a1f8-303c3876ebbe",
+            "name": "AttackTarget",
+            "title": "Attack target",
+            "description": "",
+            "display": {
+                "x": 912,
+                "y": -242
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "38fff880-22a3-4a9e-8fc2-84b4a251df2f": {
+            "id": "38fff880-22a3-4a9e-8fc2-84b4a251df2f",
+            "name": "MoveToTarget",
+            "title": "Move to target",
+            "description": "",
+            "display": {
+                "x": 704,
+                "y": -178
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "d4895ca1-8642-46a7-8309-4a96cc29a895": {
+            "id": "d4895ca1-8642-46a7-8309-4a96cc29a895",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 704,
+                "y": -274
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "cea4e7a6-bad0-4ef6-88bb-26b2f166f547",
+                "8ba0210e-e3f3-49e8-a1f8-303c3876ebbe"
+            ]
+        },
+        "5ad4e472-a167-4683-aed7-e1892f068ba8": {
+            "id": "5ad4e472-a167-4683-aed7-e1892f068ba8",
+            "name": "Priority",
+            "title": "Priority",
+            "description": "",
+            "display": {
+                "x": 496,
+                "y": -226
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "d4895ca1-8642-46a7-8309-4a96cc29a895",
+                "38fff880-22a3-4a9e-8fc2-84b4a251df2f"
+            ]
+        },
+        "960e52dc-0214-492f-8e4a-5bd35cdfffb0": {
+            "id": "960e52dc-0214-492f-8e4a-5bd35cdfffb0",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 288,
+                "y": -298
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "43bbdc1e-5ec8-4993-85c9-157d7a3af1e7",
+                "5ad4e472-a167-4683-aed7-e1892f068ba8"
+            ]
+        },
+        "2f9a4330-87bb-4aa9-bb87-a137153a736f": {
+            "id": "2f9a4330-87bb-4aa9-bb87-a137153a736f",
+            "name": "ThereIsAnEnemyVisible",
+            "title": "There is an enemy visible?",
+            "description": "",
+            "display": {
+                "x": 496,
+                "y": -114
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "3cd6a861-90c3-4e1f-875a-8095b986f36c": {
+            "id": "3cd6a861-90c3-4e1f-875a-8095b986f36c",
+            "name": "SetNearestTarget",
+            "title": "Set nearest target",
+            "description": "",
+            "display": {
+                "x": 496,
+                "y": -50
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "09da98a7-fe87-462a-aa3c-2ad1087aec8e": {
+            "id": "09da98a7-fe87-462a-aa3c-2ad1087aec8e",
+            "name": "MoveToTarget",
+            "title": "Move to target",
+            "description": "",
+            "display": {
+                "x": 496,
+                "y": 14
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "dae599e4-88e7-4615-8262-54cc03936faa": {
+            "id": "dae599e4-88e7-4615-8262-54cc03936faa",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 288,
+                "y": -50
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "2f9a4330-87bb-4aa9-bb87-a137153a736f",
+                "3cd6a861-90c3-4e1f-875a-8095b986f36c",
+                "09da98a7-fe87-462a-aa3c-2ad1087aec8e"
+            ]
+        },
+        "7e5f5b63-5c51-41a6-9986-2a1f0d136e83": {
+            "id": "7e5f5b63-5c51-41a6-9986-2a1f0d136e83",
+            "name": "HaveIAPosition",
+            "title": "Have I a position?",
+            "description": "",
+            "display": {
+                "x": 496,
+                "y": 78
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "df6dd1a1-9efa-474d-8a21-d005fbbe3c43": {
+            "id": "df6dd1a1-9efa-474d-8a21-d005fbbe3c43",
+            "name": "MoveToPosition",
+            "title": "Move to position",
+            "description": "",
+            "display": {
+                "x": 496,
+                "y": 142
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "8568e078-d626-48af-8f03-437f3fbaade2": {
+            "id": "8568e078-d626-48af-8f03-437f3fbaade2",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 288,
+                "y": 110
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "7e5f5b63-5c51-41a6-9986-2a1f0d136e83",
+                "df6dd1a1-9efa-474d-8a21-d005fbbe3c43"
+            ]
+        }
+    },
+    "custom_nodes": [
+        {
+            "name": "AmIBored",
+            "title": "Am I bored?",
+            "category": "condition"
+        },
+        {
+            "name": "MoveToRandom",
+            "title": "Move to random position",
+            "category": "action"
+        },
+        {
+            "name": "CanIAttackTarget",
+            "title": "Can I attack target?",
+            "category": "condition"
+        },
+        {
+            "name": "AttackTarget",
+            "title": "Attack target",
+            "category": "action"
+        },
+        {
+            "name": "MoveToTarget",
+            "title": "Move to target",
+            "category": "action"
+        },
+        {
+            "name": "ThereIsAnEnemyVisible",
+            "title": "There is an enemy visible?",
+            "category": "condition"
+        },
+        {
+            "name": "SetNearestTarget",
+            "title": "Set nearest target",
+            "category": "action"
+        },
+        {
+            "name": "HaveIAPosition",
+            "title": "Have I a position?",
+            "category": "condition"
+        },
+        {
+            "name": "MoveToPosition",
+            "title": "Move to position",
+            "category": "action"
+        },
+        {
+            "name": "HavaIATarget",
+            "title": "Have I a target?",
+            "category": "condition"
+        }
+    ]
+}

@@ -11,8 +11,10 @@
 
     <!-- ALL OUR CLASSES HERE -->
     <script type="text/javascript" src="/libs/behavior3-0.2.0dev.js"></script>
+    <script type="text/javascript" src="/tests/js/stage.js"></script>
     <script type="text/javascript" src="/tests/js/treeLoader.js"></script>
     <script type="text/javascript" src="/tests/js/openDoorNodes.js"></script>
+        <script type="text/javascript" src="/tests/js/unitNodes.js"></script>
     <script type="text/javascript" src="/tests/js/app.js"></script>
 
     <!-- CSS -->
@@ -21,7 +23,7 @@
 
   </head>
 
-  <body>
+  <body onLoad="start();">
     <div class="info">Behavior Tree Example</div>
     <canvas id="canvas" width="800" height="600">enable javascript</canvas>
   </body>

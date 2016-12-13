@@ -1,14 +1,14 @@
 'use strict';
 
-var openDoorNodes = {};
+var unitNodes = {};
 
 
-openDoorNodes.init = function(action, condition) {
-    openDoorNodes.actions(action);
-    openDoorNodes.conditions(condition);
+unitNodes.init = function(action, condition) {
+    unitNodes.actions(action);
+    unitNodes.conditions(condition);
 }
 
-openDoorNodes.actions = function(action) {
+unitNodes.actions = function(action) {
     action('walkToDoor', {
         tick: function(tick) {
             tick.blackboard.set('walking', 1);
@@ -56,8 +56,8 @@ openDoorNodes.actions = function(action) {
 }
 
 
-openDoorNodes.conditions = function(condition) {
-    condition('canIunlockTheDoor', {
+unitNodes.conditions = function(condition) {
+    condition('AmIBored', {
         tick: function(tick) {
             var skill = tick.blackboard.get('lockpick-level');
             let name = tick.blackboard.get('name');
@@ -78,7 +78,7 @@ openDoorNodes.conditions = function(condition) {
             return b3.FAILURE;
         }
     });
-    condition('IsDoorUnlocked', {
+    condition('MoveToRandom', {
         tick: function(tick) {
             let name = tick.blackboard.get('name');
             var locked = tick.blackboard.get('locked');

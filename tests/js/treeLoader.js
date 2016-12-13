@@ -1,8 +1,6 @@
 'use strict';
 
-
 var treeLoader = {};
-
 var tree = {};
 var ai = {};
 
@@ -47,45 +45,15 @@ treeLoader.loadNode = function(name, properties, type) {
 /**
  * Init the module
  */
-treeLoader.init = function() {
-    
-    ai = {'guy': new b3.BehaviorTree()};
-    $.getJSON( "/tests/config/openDoor.json" )
+treeLoader.init = function(filename,aiName,nodes,callback) {
+    var ai = treeLoader.ai();
+    ai[aiName] = new b3.BehaviorTree();
+    $.getJSON( filename )
       .done(function( data ) {
-        openDoorNodes.init(treeLoader.loadAction, treeLoader.loadCondition);
-        ai.guy.load(data,tree );
-        //console.log('data',data);
-        console.log('**** Lucky tries the door');
-var lucky = {
-    memory:  new b3.Blackboard()
-};
-lucky.memory.set('name', 'Lucky');
-ai.guy.tick(lucky, lucky.memory);
+        nodes.init(treeLoader.loadAction, treeLoader.loadCondition);
+        ai[aiName].load(data,tree );
+        return callback(ai[aiName]);
 
-console.log('');
-console.log('**** Thief tries the door');
-var thief = {
-    memory:  new b3.Blackboard()
-};
-thief.memory.set('name', 'Thief');
-thief.memory.set('locked', true);
-thief.memory.set('lockpick-level', 8);
-
-ai.guy.tick(thief, thief.memory);
-
-console.log('');
-console.log('**** Thug tries the door');
-var thug = {
-    memory:  new b3.Blackboard()
-};
-thug.memory.set('name', 'Thug');
-thug.memory.set('locked', true);
-thug.memory.set('lockpick-level', 2);
-
-ai.guy.tick(thug, thug.memory);
-console.log('');
-console.log('');
-console.log('**** Simulation complete');
       })
       .fail(function( jqxhr, textStatus, error ) {
         var err = {
@@ -100,8 +68,3 @@ console.log('**** Simulation complete');
 
 treeLoader.ai = function() {return ai};
 
-
-// module.exports = {
-//     ai: function() {return ai;},
-//     init: init
-// };
