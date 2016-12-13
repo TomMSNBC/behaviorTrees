@@ -1,19 +1,19 @@
 'use strict';
 
-var openDoorNodes = {};
+var controlRackNodes = {};
 
 
-openDoorNodes.init = function(action, condition) {
-    openDoorNodes.actions(action);
-    openDoorNodes.conditions(condition);
+controlRackNodes.init = function(action, condition) {
+    controlRackNodes.actions(action);
+    controlRackNodes.conditions(condition);
 }
 
-openDoorNodes.actions = function(action) {
-    action('walkToDoor', {
+controlRackNodes.actions = function(action) {
+    action('SwitchToPlay', {
         tick: function(tick) {
-            tick.blackboard.set('walking', 1);
+            // tick.blackboard.set('walking', 1);
             let name = tick.blackboard.get('name');
-            //console.log(name + ' is walking to the door');
+            console.log(name + ' Switching to play');
 
             return b3.SUCCESS;
         }
@@ -30,9 +30,9 @@ openDoorNodes.actions = function(action) {
         tick: function(tick) {
             tick.blackboard.set('walking', 0);
             let name = tick.blackboard.get('name');
-            //console.log(name + ' is smashing the door');
+            console.log(name + ' is smashing the door');
 
-            //return b3.SUCCESS;
+            return b3.SUCCESS;
         }
     });
     action('walkThroughDoor', {
@@ -56,7 +56,7 @@ openDoorNodes.actions = function(action) {
 }
 
 
-openDoorNodes.conditions = function(condition) {
+controlRackNodes.conditions = function(condition) {
     condition('canIunlockTheDoor', {
         tick: function(tick) {
             var skill = tick.blackboard.get('lockpick-level');
@@ -85,11 +85,12 @@ openDoorNodes.conditions = function(condition) {
             if (!locked) {
                 return b3.SUCCESS;
             }
-            //console.log(name + ' notices the door is locked');
+            console.log(name + ' notices the door is locked');
             return b3.FAILURE;
         }
     });
-    condition('IsMouseOver', {
+
+    condition('IsPauseClicked', {
         tick: function(tick) {
             /*var point = agent.globalToLocal(stage.mouseX, stage.mouseY);
                 if (tick.target.hitTest(point.x, point.y)) {

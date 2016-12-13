@@ -37,7 +37,8 @@ gulp.task('watch', function() {
 
 var testpaths = [
 './tests/**/*.html',
-'./tests/**/*.js'
+'./tests/**/*.js',
+'./tests/*.js'
 ];
 
 gulp.task('html', function () {

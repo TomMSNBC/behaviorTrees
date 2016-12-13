@@ -1,0 +1,82 @@
+{
+    "title": "A Behavior Tree",
+    "description": "",
+    "root": "0f585788-f111-4260-95e0-7fe1643918de",
+    "display": {
+        "camera_x": 671,
+        "camera_y": 399.5,
+        "camera_z": 1,
+        "x": 0,
+        "y": 0
+    },
+    "properties": {},
+    "nodes": {
+        "0f585788-f111-4260-95e0-7fe1643918de": {
+            "id": "0f585788-f111-4260-95e0-7fe1643918de",
+            "name": "Priority",
+            "title": "Priority",
+            "description": "",
+            "display": {
+                "x": 80,
+                "y": 0
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "fce4bb44-4686-4a32-852a-af2bb3b22d0c"
+            ]
+        },
+        "fce4bb44-4686-4a32-852a-af2bb3b22d0c": {
+            "id": "fce4bb44-4686-4a32-852a-af2bb3b22d0c",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 160,
+                "y": -48
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "5d0e0134-dc75-4265-884d-a81a85e439b9",
+                "f996e1c7-552e-47b7-9988-54e732bf6762"
+            ]
+        },
+        "5d0e0134-dc75-4265-884d-a81a85e439b9": {
+            "id": "5d0e0134-dc75-4265-884d-a81a85e439b9",
+            "name": "IsPauseClicked",
+            "title": "IsPauseClicked",
+            "description": "",
+            "display": {
+                "x": 288,
+                "y": -80
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "f996e1c7-552e-47b7-9988-54e732bf6762": {
+            "id": "f996e1c7-552e-47b7-9988-54e732bf6762",
+            "name": "SwitchToPlay",
+            "title": "SwitchToPlay",
+            "description": "",
+            "display": {
+                "x": 288,
+                "y": 0
+            },
+            "parameters": {},
+            "properties": {}
+        }
+    },
+    "custom_nodes": [
+        {
+            "name": "IsPauseClicked",
+            "title": "IsPauseClicked",
+            "category": "condition"
+        },
+        {
+            "name": "SwitchToPlay",
+            "title": "SwitchToPlay",
+            "category": "action"
+        }
+    ]
+}

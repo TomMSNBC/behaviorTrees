@@ -1,0 +1,266 @@
+{
+    "title": "A Behavior Tree",
+    "description": "",
+    "root": "4976592d-0fe9-4088-8d8e-67a2c0ba98de",
+    "display": {
+        "camera_x": 1280,
+        "camera_y": 647.5,
+        "camera_z": 1,
+        "x": 0,
+        "y": 0
+    },
+    "properties": {},
+    "nodes": {
+        "d14c7d44-66c8-4d21-83e1-e2041a0cfe73": {
+            "id": "d14c7d44-66c8-4d21-83e1-e2041a0cfe73",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": -600,
+                "y": -252
+            },
+            "properties": {},
+            "children": [
+                "7d493574-613c-4703-8946-82f694c5780e",
+                "6e0ae324-d48d-4084-89f7-54f89061d82d"
+            ]
+        },
+        "4976592d-0fe9-4088-8d8e-67a2c0ba98de": {
+            "id": "4976592d-0fe9-4088-8d8e-67a2c0ba98de",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": -876,
+                "y": -384
+            },
+            "properties": {},
+            "children": [
+                "fb0f5694-af5f-46a9-82c0-22b9fb85e2b3",
+                "5fa8758b-06eb-429a-8c00-a92ec2c54934",
+                "d799cbce-9e9e-4156-845e-4130a994217f",
+                "48dcae93-0cd3-428b-8dea-7cc48a19f91e"
+            ]
+        },
+        "5fa8758b-06eb-429a-8c00-a92ec2c54934": {
+            "id": "5fa8758b-06eb-429a-8c00-a92ec2c54934",
+            "name": "Priority",
+            "title": "Priority",
+            "description": "",
+            "display": {
+                "x": -756,
+                "y": -276
+            },
+            "properties": {},
+            "children": [
+                "695888e5-6ddc-4030-82b5-302110063855",
+                "77f35615-10c2-433d-b2d2-b7976c3bbdb6",
+                "d14c7d44-66c8-4d21-83e1-e2041a0cfe73",
+                "0c0acf46-97e7-477c-bed2-54912f01194e"
+            ]
+        },
+        "fb0f5694-af5f-46a9-82c0-22b9fb85e2b3": {
+            "id": "fb0f5694-af5f-46a9-82c0-22b9fb85e2b3",
+            "name": "walkToDoor",
+            "title": "walkToDoor",
+            "description": "",
+            "display": {
+                "x": -592,
+                "y": -512
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "b555ede2-1600-4cdc-9df4-111454e26dac": {
+            "id": "b555ede2-1600-4cdc-9df4-111454e26dac",
+            "name": "openDoor",
+            "title": "openDoor",
+            "description": "",
+            "display": {
+                "x": -448,
+                "y": -304
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "6e0ae324-d48d-4084-89f7-54f89061d82d": {
+            "id": "6e0ae324-d48d-4084-89f7-54f89061d82d",
+            "name": "openDoor",
+            "title": "openDoor",
+            "description": "",
+            "display": {
+                "x": -444,
+                "y": -168
+            },
+            "properties": {}
+        },
+        "0c0acf46-97e7-477c-bed2-54912f01194e": {
+            "id": "0c0acf46-97e7-477c-bed2-54912f01194e",
+            "name": "smashDoor",
+            "title": "smashDoor",
+            "description": "",
+            "display": {
+                "x": -444,
+                "y": -96
+            },
+            "properties": {}
+        },
+        "d799cbce-9e9e-4156-845e-4130a994217f": {
+            "id": "d799cbce-9e9e-4156-845e-4130a994217f",
+            "name": "walkThroughDoor",
+            "title": "walkThroughDoor",
+            "description": "",
+            "display": {
+                "x": -684,
+                "y": -24
+            },
+            "properties": {}
+        },
+        "48dcae93-0cd3-428b-8dea-7cc48a19f91e": {
+            "id": "48dcae93-0cd3-428b-8dea-7cc48a19f91e",
+            "name": "closeDoor",
+            "title": "closeDoor",
+            "description": "",
+            "display": {
+                "x": -696,
+                "y": 60
+            },
+            "properties": {}
+        },
+        "7d493574-613c-4703-8946-82f694c5780e": {
+            "id": "7d493574-613c-4703-8946-82f694c5780e",
+            "name": "canIunlockTheDoor",
+            "title": "canIunlockTheDoor",
+            "description": "",
+            "display": {
+                "x": -432,
+                "y": -240
+            },
+            "properties": {}
+        },
+        "77f35615-10c2-433d-b2d2-b7976c3bbdb6": {
+            "id": "77f35615-10c2-433d-b2d2-b7976c3bbdb6",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": -592,
+                "y": -352
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "ae8c258c-ee24-4741-8914-b3e3b4ff4eca",
+                "b555ede2-1600-4cdc-9df4-111454e26dac"
+            ]
+        },
+        "ae8c258c-ee24-4741-8914-b3e3b4ff4eca": {
+            "id": "ae8c258c-ee24-4741-8914-b3e3b4ff4eca",
+            "name": "IsDoorUnlocked",
+            "title": "IsDoorUnlocked",
+            "description": "",
+            "display": {
+                "x": -448,
+                "y": -368
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "ac0c1fc2-664f-4303-84fa-7ffe52a2f693": {
+            "id": "ac0c1fc2-664f-4303-84fa-7ffe52a2f693",
+            "name": "Priority",
+            "title": "Priority",
+            "description": "",
+            "display": {
+                "x": -1216,
+                "y": -448
+            },
+            "parameters": {},
+            "properties": {},
+            "children": []
+        },
+        "695888e5-6ddc-4030-82b5-302110063855": {
+            "id": "695888e5-6ddc-4030-82b5-302110063855",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": -592,
+                "y": -448
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "21e5e89d-3b10-45ac-8db2-cea08b03d937",
+                "6674a778-76e0-4929-9b30-25278f94ef9e"
+            ]
+        },
+        "21e5e89d-3b10-45ac-8db2-cea08b03d937": {
+            "id": "21e5e89d-3b10-45ac-8db2-cea08b03d937",
+            "name": "IsMouseOver",
+            "title": "IsMouseOver",
+            "description": "",
+            "display": {
+                "x": -432,
+                "y": -464
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "6674a778-76e0-4929-9b30-25278f94ef9e": {
+            "id": "6674a778-76e0-4929-9b30-25278f94ef9e",
+            "name": "openDoor",
+            "title": "openDoor",
+            "description": "",
+            "display": {
+                "x": -432,
+                "y": -416
+            },
+            "parameters": {},
+            "properties": {}
+        }
+    },
+    "custom_nodes": [
+        {
+            "name": "walkToDoor",
+            "title": "walkToDoor",
+            "category": "action"
+        },
+        {
+            "name": "openDoor",
+            "title": "openDoor",
+            "category": "action"
+        },
+        {
+            "name": "smashDoor",
+            "title": "smashDoor",
+            "category": "action"
+        },
+        {
+            "name": "walkThroughDoor",
+            "title": "walkThroughDoor",
+            "category": "action"
+        },
+        {
+            "name": "closeDoor",
+            "title": "closeDoor",
+            "category": "action"
+        },
+        {
+            "name": "canIunlockTheDoor",
+            "title": "canIunlockTheDoor",
+            "category": "condition"
+        },
+        {
+            "name": "IsDoorUnlocked",
+            "title": "IsDoorUnlocked",
+            "category": "condition"
+        },
+        {
+            "name": "IsMouseOver",
+            "title": "IsMouseOver",
+            "category": "condition"
+        }
+    ]
+}

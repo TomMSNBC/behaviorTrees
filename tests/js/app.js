@@ -28,7 +28,7 @@ var simulation = function(ai) {
 	};
 	thief.memory.set('name', 'Thief');
 	thief.memory.set('locked', true);
-	thief.memory.set('lockpick-level', 2);
+	thief.memory.set('lockpick-level', 6);
 
 	ai.tick(thief, thief.memory);
 
@@ -53,21 +53,24 @@ function go(ai) {
 
 function onTick() {
 //tree.tick(agent, blackboard);
-	var lucky = {
+	var cRack = {
 	    memory:  new b3.Blackboard()
 	};
-	lucky.memory.set('name', 'Lucky');
-mainAi.tick(lucky, lucky.memory);
+	cRack.memory.set('name', 'cRack');
+	cRack.memory.set('locked', true);
+	mainAi.tick(cRack, cRack.memory);
   stage.update();
 }
 
 function loadTree() {
 	var jsonPath = "/tests/config/"
 	//var filename = jsonPath + "unit_behavior.json";
-	var filename = jsonPath + "openDoor.json";
-	var nodes = openDoorNodes;
+	//var filename = jsonPath + "openDoor2.json";
+	var filename = jsonPath + "controlRack.json";
+	//var nodes = openDoorNodes;
+	var nodes = controlRackNodes;
 	var aiName = "fred";
 	//var nodes = unitNodes;
-	treeLoader.init(filename,aiName,nodes,simulation);
+	treeLoader.init(filename,aiName,nodes,go);
 }
 
