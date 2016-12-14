@@ -5,7 +5,7 @@
     "display": {
         "camera_x": 671,
         "camera_y": 399.5,
-        "camera_z": 0.75,
+        "camera_z": 0.5,
         "x": -64,
         "y": 0
     },
@@ -17,7 +17,7 @@
             "title": "Priority",
             "description": "",
             "display": {
-                "x": 32,
+                "x": 144,
                 "y": 0
             },
             "parameters": {},
@@ -26,7 +26,9 @@
                 "fce4bb44-4686-4a32-852a-af2bb3b22d0c",
                 "4713ed67-9558-421a-8ae0-a64be0534e5f",
                 "0ec8572c-a034-459b-a58d-679c2115a3a6",
-                "26087087-f342-453b-880f-bf96bca59234"
+                "26087087-f342-453b-880f-bf96bca59234",
+                "9441baf6-8bca-4e27-bd95-28dbbb148ed4",
+                "a3df31ce-aaf7-43e1-b9bc-8ae4a0b28b8f"
             ]
         },
         "fce4bb44-4686-4a32-852a-af2bb3b22d0c": {
@@ -35,8 +37,8 @@
             "title": "Sequence",
             "description": "",
             "display": {
-                "x": 144,
-                "y": -96
+                "x": 352,
+                "y": -192
             },
             "parameters": {},
             "properties": {},
@@ -51,8 +53,8 @@
             "title": "IsPauseClicked",
             "description": "",
             "display": {
-                "x": 304,
-                "y": -144
+                "x": 560,
+                "y": -224
             },
             "parameters": {},
             "properties": {}
@@ -63,8 +65,8 @@
             "title": "SwitchToPlay",
             "description": "",
             "display": {
-                "x": 304,
-                "y": -48
+                "x": 560,
+                "y": -160
             },
             "parameters": {},
             "properties": {}
@@ -75,8 +77,8 @@
             "title": "Sequence",
             "description": "",
             "display": {
-                "x": 144,
-                "y": 112
+                "x": 352,
+                "y": -64
             },
             "parameters": {},
             "properties": {},
@@ -91,8 +93,8 @@
             "title": "IsPlayClicked",
             "description": "",
             "display": {
-                "x": 304,
-                "y": 64
+                "x": 560,
+                "y": -96
             },
             "parameters": {},
             "properties": {}
@@ -103,8 +105,8 @@
             "title": "SwitchToPause",
             "description": "",
             "display": {
-                "x": 304,
-                "y": 160
+                "x": 560,
+                "y": -32
             },
             "parameters": {},
             "properties": {}
@@ -115,8 +117,8 @@
             "title": "Sequence",
             "description": "",
             "display": {
-                "x": 144,
-                "y": 256
+                "x": 352,
+                "y": 64
             },
             "parameters": {},
             "properties": {},
@@ -131,8 +133,8 @@
             "title": "IsFullScreenClicked",
             "description": "",
             "display": {
-                "x": 304,
-                "y": 224
+                "x": 560,
+                "y": 32
             },
             "parameters": {},
             "properties": {}
@@ -143,8 +145,8 @@
             "title": "SwitchToFullScreen",
             "description": "",
             "display": {
-                "x": 320,
-                "y": 336
+                "x": 560,
+                "y": 96
             },
             "parameters": {},
             "properties": {}
@@ -155,8 +157,8 @@
             "title": "Sequence",
             "description": "",
             "display": {
-                "x": 144,
-                "y": 448
+                "x": 352,
+                "y": 192
             },
             "parameters": {},
             "properties": {},
@@ -171,8 +173,8 @@
             "title": "TurnOnCC",
             "description": "",
             "display": {
-                "x": 320,
-                "y": 496
+                "x": 560,
+                "y": 224
             },
             "parameters": {},
             "properties": {}
@@ -183,8 +185,88 @@
             "title": "IsCCClicked",
             "description": "",
             "display": {
-                "x": 320,
-                "y": 416
+                "x": 560,
+                "y": 160
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "9441baf6-8bca-4e27-bd95-28dbbb148ed4": {
+            "id": "9441baf6-8bca-4e27-bd95-28dbbb148ed4",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 352,
+                "y": 352
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "fbd93b2a-39ad-4d2a-ae1f-d763f003efd1",
+                "f65d12a8-f7ff-420e-989a-0a19ec0e6b6a"
+            ]
+        },
+        "fbd93b2a-39ad-4d2a-ae1f-d763f003efd1": {
+            "id": "fbd93b2a-39ad-4d2a-ae1f-d763f003efd1",
+            "name": "IsMuteClicked",
+            "title": "IsMuteClicked",
+            "description": "",
+            "display": {
+                "x": 560,
+                "y": 320
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "f65d12a8-f7ff-420e-989a-0a19ec0e6b6a": {
+            "id": "f65d12a8-f7ff-420e-989a-0a19ec0e6b6a",
+            "name": "Mute",
+            "title": "Mute",
+            "description": "",
+            "display": {
+                "x": 560,
+                "y": 400
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "a3df31ce-aaf7-43e1-b9bc-8ae4a0b28b8f": {
+            "id": "a3df31ce-aaf7-43e1-b9bc-8ae4a0b28b8f",
+            "name": "Sequence",
+            "title": "Sequence",
+            "description": "",
+            "display": {
+                "x": 352,
+                "y": 528
+            },
+            "parameters": {},
+            "properties": {},
+            "children": [
+                "51703ae6-e17d-4cce-80a3-906bc9e4f25c",
+                "f1fd24a4-3349-429c-860e-f2b0b6af4ffb"
+            ]
+        },
+        "f1fd24a4-3349-429c-860e-f2b0b6af4ffb": {
+            "id": "f1fd24a4-3349-429c-860e-f2b0b6af4ffb",
+            "name": "UnMute",
+            "title": "UnMute",
+            "description": "",
+            "display": {
+                "x": 560,
+                "y": 576
+            },
+            "parameters": {},
+            "properties": {}
+        },
+        "51703ae6-e17d-4cce-80a3-906bc9e4f25c": {
+            "id": "51703ae6-e17d-4cce-80a3-906bc9e4f25c",
+            "name": "IsUnMuteClicked",
+            "title": "IsUnMuteClicked",
+            "description": "",
+            "display": {
+                "x": 560,
+                "y": 496
             },
             "parameters": {},
             "properties": {}
@@ -229,6 +311,26 @@
         {
             "name": "TurnOnCC",
             "title": "TurnOnCC",
+            "category": "action"
+        },
+        {
+            "name": "IsMuteClicked",
+            "title": "IsMuteClicked",
+            "category": "condition"
+        },
+        {
+            "name": "IsUnMuteClicked",
+            "title": "IsUnMuteClicked",
+            "category": "condition"
+        },
+        {
+            "name": "Mute",
+            "title": "Mute",
+            "category": "action"
+        },
+        {
+            "name": "UnMute",
+            "title": "UnMute",
             "category": "action"
         }
     ]
