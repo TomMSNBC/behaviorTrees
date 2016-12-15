@@ -2,12 +2,23 @@
 
 var controlRackNodes = {};
 
-
+/**
+ * node initializer 
+ *
+ * @param  {Object} action
+ * @param  {Object} condition
+ */
 controlRackNodes.init = function(action, condition) {
     controlRackNodes.actions(action);
     controlRackNodes.conditions(condition);
 }
 
+/**
+ * node actions 
+ * Available actions defined in behavior tree
+ *
+ * @param  {Object} action
+ */
 controlRackNodes.actions = function(action) {
     action('SwitchToPlay', {
         tick: function(tick) {
@@ -36,6 +47,7 @@ controlRackNodes.actions = function(action) {
             // tick.blackboard.set('walking', 1);
             let name = tick.blackboard.get('name');
             console.log(name + ' Switching to full Screen');
+            video2.rotation ++;
             return b3.SUCCESS;
         }
     });
@@ -44,6 +56,7 @@ controlRackNodes.actions = function(action) {
             // tick.blackboard.set('walking', 1);
             let name = tick.blackboard.get('name');
             console.log(name + ' Turning on Closed Captions');
+            video2.rotation --;
             return b3.SUCCESS;
         }
     });
@@ -64,11 +77,25 @@ controlRackNodes.actions = function(action) {
             videoDom.muted = false;
             return b3.SUCCESS;
         }
+    }); 
+    action('UpdateCurrentTime', {
+        tick: function(tick) {
+            // tick.blackboard.set('walking', 1);
+            let name = tick.blackboard.get('name');
+            //console.log(name + ' updating duration');
+            currentTime.text = videoDom.currentTime;
+            return b3.SUCCESS;
+        }
     });           
     
 }
 
-
+/**
+ * node conditions 
+ * Available conditions defined in behavior tree
+ *
+ * @param  {Object} action
+ */
 controlRackNodes.conditions = function(condition) {
 
     condition('IsPauseClicked', {
@@ -79,13 +106,11 @@ controlRackNodes.conditions = function(condition) {
                 pauseButton.clicking = true;
                 if (!pauseButton.clicked) {
                     pauseButton.clicked = true;
-                    console.log('mouse down');
                 }
 
             });
             if (pauseButton.clicked) {
                 pauseButton.clicked = false;
-                console.log('clicked...');
                 return b3.SUCCESS;
             }
             if (!pauseButton.clicking) {
@@ -103,7 +128,6 @@ controlRackNodes.conditions = function(condition) {
                 playButton.clicking = true;
                 if (!playButton.clicked) {
                     playButton.clicked = true;
-                    console.log('play clicked');
                 }
 
             });
@@ -172,7 +196,6 @@ controlRackNodes.conditions = function(condition) {
                 muteoff.clicking = true;
                 if (!muteoff.clicked) {
                     muteoff.clicked = true;
-                    console.log('mute clicked');
                     muteoff.visible = false;
                     muteon.visible = true;
                     videoDom.muted= true;
@@ -198,7 +221,6 @@ controlRackNodes.conditions = function(condition) {
                 muteon.clicking = true;
                 if (!muteoff.clicked) {
                     muteon.clicked = true;
-                    console.log('unmute clicked');
                     muteoff.visible = true;
                     muteon.visible = false;
                     videoDom.muted= false;

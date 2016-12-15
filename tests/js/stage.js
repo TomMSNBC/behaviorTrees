@@ -17,7 +17,8 @@ function start() {
   canvas.width = window.innerWidth;
 
   drawVideo();
-  drawControls();
+  drawContentControls();
+  drawCounters();
   stage.update();
   loadTree();
 }
@@ -27,19 +28,30 @@ function drawVideo() {
 videoDom = document.createElement('video');
 videoDom.src = '/tests/video/round.mp4';
 videoDom.autoplay = false;
-var video2 = new createjs.Bitmap(videoDom);
+videoDom.currentTime = 140;
+video2 = new createjs.Bitmap(videoDom);
 video2.x = 100;
 video2.y = 10;
 //video2.rotation = 10;
 video2.scaleX = 1.39;
 video2.scaleY = 1;
 video2.visible = true;
+video2.alpha = .5;
+
+
 
 //videoDom.pause();
 stage.addChild(video2);
 }
 
-function drawControls() {
+function drawCounters() {
+  currentTime = new createjs.Text("0:00", "10px Arial", "#FFF");
+  currentTime.x = 167;
+  currentTime.y = racky+5;
+  stage.addChild(currentTime);
+}
+
+function drawContentControls() {
   // agent = new createjs.Shape();
   // agent.graphics.beginFill('yellow');
   // agent.graphics.drawRect(-10, -30, 50, 60);

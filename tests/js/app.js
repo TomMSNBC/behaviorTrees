@@ -8,44 +8,11 @@ var sim2 = function(ai) {
 	var lucky = {
 	    memory:  new b3.Blackboard()
 	};
-	lucky.memory.set('name', 'Lucky');
+	lucky.memory.set('name', 'Rack');
 	ai.tick(lucky, lucky.memory);
 }
 
-var simulation = function(ai) {
 
-	console.log('**** Lucky tries the door');
-	var lucky = {
-	    memory:  new b3.Blackboard()
-	};
-	lucky.memory.set('name', 'Lucky');
-	ai.tick(lucky, lucky.memory);
-
-	console.log('');
-	console.log('**** Thief tries the door');
-	var thief = {
-	    memory:  new b3.Blackboard()
-	};
-	thief.memory.set('name', 'Thief');
-	thief.memory.set('locked', true);
-	thief.memory.set('lockpick-level', 6);
-
-	ai.tick(thief, thief.memory);
-
-	console.log('');
-	console.log('**** Thug tries the door');
-	var thug = {
-	    memory:  new b3.Blackboard()
-	};
-	thug.memory.set('name', 'Thug');
-	thug.memory.set('locked', true);
-	thug.memory.set('lockpick-level', 2);
-
-	ai.tick(thug, thug.memory);
-	console.log('');
-	console.log('');
-	console.log('**** Simulation complete');
-}
 function go(ai) {
 	  createjs.Ticker.addEventListener('tick', onTick);
 	  mainAi = ai;
