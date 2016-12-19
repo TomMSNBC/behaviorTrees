@@ -25,8 +25,8 @@ controlRackNodes.actions = function(action) {
             // tick.blackboard.set('walking', 1);
             let name = tick.blackboard.get('name');
             console.log(name + ' Switching to play');
-            playButton.visible = true;
-            pauseButton.visible = false;
+            playButton.style.display = "none";
+            pauseButton.style.display = "block";
             videoDom.play();
             return b3.SUCCESS;
         }
@@ -36,8 +36,8 @@ controlRackNodes.actions = function(action) {
             // tick.blackboard.set('walking', 1);
             let name = tick.blackboard.get('name');
             console.log(name + ' Switching to pause');
-            playButton.visible = false;
-            pauseButton.visible = true;
+            playButton.style.display = "block";
+            pauseButton.style.display = "none";
             videoDom.pause();
             return b3.SUCCESS;
         }
@@ -47,7 +47,7 @@ controlRackNodes.actions = function(action) {
             // tick.blackboard.set('walking', 1);
             let name = tick.blackboard.get('name');
             console.log(name + ' Switching to full Screen');
-            video2.rotation ++;
+            //video2.rotation ++;
             return b3.SUCCESS;
         }
     });
@@ -56,7 +56,7 @@ controlRackNodes.actions = function(action) {
             // tick.blackboard.set('walking', 1);
             let name = tick.blackboard.get('name');
             console.log(name + ' Turning on Closed Captions');
-            video2.rotation --;
+            //video2.rotation --;
             return b3.SUCCESS;
         }
     });
@@ -65,7 +65,7 @@ controlRackNodes.actions = function(action) {
             // tick.blackboard.set('walking', 1);
             let name = tick.blackboard.get('name');
             console.log(name + ' muting');
-            videoDom.muted = true;
+            //videoDom.muted = true;
             return b3.SUCCESS;
         }
     });
@@ -74,7 +74,7 @@ controlRackNodes.actions = function(action) {
             // tick.blackboard.set('walking', 1);
             let name = tick.blackboard.get('name');
             console.log(name + ' unmuting');
-            videoDom.muted = false;
+            //videoDom.muted = false;
             return b3.SUCCESS;
         }
     });
@@ -83,7 +83,7 @@ controlRackNodes.actions = function(action) {
             // tick.blackboard.set('walking', 1);
             let name = tick.blackboard.get('name');
             //console.log(name + ' updating duration');
-            currentTime.text = videoDom.currentTime;
+            currentTime.innerHTML = videoDom.currentTime;
             return b3.SUCCESS;
         }
     });
@@ -102,13 +102,13 @@ controlRackNodes.conditions = function(condition) {
         tick: function(tick) {
             pauseButton.b3 = b3;
             pauseButton.clicking = false;
-            pauseButton.on("mousedown", function() {
-                pauseButton.clicking = true;
+            pauseButton.onclick = function() {
+              console.log('clicked..');
+              pauseButton.clicking = true;
                 if (!pauseButton.clicked) {
                     pauseButton.clicked = true;
                 }
-
-            });
+            }
             if (pauseButton.clicked) {
                 pauseButton.clicked = false;
                 return b3.SUCCESS;
@@ -124,13 +124,15 @@ controlRackNodes.conditions = function(condition) {
         tick: function(tick) {
             playButton.b3 = b3;
             playButton.clicking = false;
-            playButton.on("mousedown", function() {
-                playButton.clicking = true;
+            playButton.onclick = function() {
+              console.log('clicked..');
+              playButton.clicking = true;
                 if (!playButton.clicked) {
                     playButton.clicked = true;
                 }
+            }
 
-            });
+
             if (playButton.clicked) {
                 playButton.clicked = false;
                 return b3.SUCCESS;
@@ -146,14 +148,7 @@ controlRackNodes.conditions = function(condition) {
         tick: function(tick) {
             fullScreen.b3 = b3;
             fullScreen.clicking = false;
-            fullScreen.on("mousedown", function() {
-                fullScreen.clicking = true;
-                if (!fullScreen.clicked) {
-                    fullScreen.clicked = true;
-                    console.log('full clicked');
-                }
 
-            });
             if (fullScreen.clicked) {
                 fullScreen.clicked = false;
                 return b3.SUCCESS;
@@ -169,14 +164,7 @@ controlRackNodes.conditions = function(condition) {
         tick: function(tick) {
             cc.b3 = b3;
             cc.clicking = false;
-            cc.on("mousedown", function() {
-                cc.clicking = true;
-                if (!cc.clicked) {
-                    cc.clicked = true;
-                    console.log('cc clicked');
-                }
 
-            });
             if (cc.clicked) {
                 cc.clicked = false;
                 return b3.SUCCESS;
@@ -192,16 +180,7 @@ controlRackNodes.conditions = function(condition) {
         tick: function(tick) {
             muteoff.b3 = b3;
             muteoff.clicking = false;
-            muteoff.on("mousedown", function() {
-                muteoff.clicking = true;
-                if (!muteoff.clicked) {
-                    muteoff.clicked = true;
-                    muteoff.visible = false;
-                    muteon.visible = true;
-                    videoDom.muted= true;
-                }
 
-            });
             if (muteoff.clicked) {
                 muteoff.clicked = false;
                 return b3.SUCCESS;
@@ -217,16 +196,7 @@ controlRackNodes.conditions = function(condition) {
         tick: function(tick) {
             muteon.b3 = b3;
             muteon.clicking = false;
-            muteon.on("mousedown", function() {
-                muteon.clicking = true;
-                if (!muteoff.clicked) {
-                    muteon.clicked = true;
-                    muteoff.visible = true;
-                    muteon.visible = false;
-                    videoDom.muted= false;
-                }
 
-            });
             if (muteon.clicked) {
                 muteon.clicked = false;
                 return b3.SUCCESS;

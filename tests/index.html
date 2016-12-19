@@ -6,7 +6,7 @@
     <title>Behavior Tree Example</title>
 
     <!-- CREATEJS -->
-    <script type="text/javascript" src="http://code.createjs.com/createjs-2013.12.12.min.js"></script>
+
     <script type="text/javascript" src="/libs/jquery.js"></script>
 
     <!-- ALL OUR CLASSES HERE -->
@@ -27,6 +27,11 @@
 
   <body onLoad="start();">
     <div class="info">Behavior Tree Example</div>
-    <canvas id="canvas" width="800" height="600">enable javascript</canvas>
+    <div id="videoEl"></div>
+    <div id="controls">
+      <div id="playButton">Play</div>
+      <div id="pauseButton">Pause</div>
+      <div id="currentTime"></div>
+    </div>
   </body>
 </html>
