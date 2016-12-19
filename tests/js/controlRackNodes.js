@@ -3,7 +3,7 @@
 var controlRackNodes = {};
 
 /**
- * node initializer 
+ * node initializer
  *
  * @param  {Object} action
  * @param  {Object} condition
@@ -14,7 +14,7 @@ controlRackNodes.init = function(action, condition) {
 }
 
 /**
- * node actions 
+ * node actions
  * Available actions defined in behavior tree
  *
  * @param  {Object} action
@@ -68,7 +68,7 @@ controlRackNodes.actions = function(action) {
             videoDom.muted = true;
             return b3.SUCCESS;
         }
-    }); 
+    });
     action('UnMute', {
         tick: function(tick) {
             // tick.blackboard.set('walking', 1);
@@ -77,21 +77,32 @@ controlRackNodes.actions = function(action) {
             videoDom.muted = false;
             return b3.SUCCESS;
         }
-    }); 
+    });
     action('UpdateCurrentTime', {
         tick: function(tick) {
             // tick.blackboard.set('walking', 1);
             let name = tick.blackboard.get('name');
             //console.log(name + ' updating duration');
             currentTime.text = videoDom.currentTime;
+            // fun
+            if (videoDom.currentTime > 141) {
+              sliceContainer.visible = true;
+                for (var i = 0; i < nSlices; i++) {
+                    var slice = sliceContainer.getChildAt(i);
+                    console.log(slice.yup);
+                    slice.y += Math.random(1)*28;
+                    slice.x += (10-Math.random(1)*17);
+                }
+            }
+
             return b3.SUCCESS;
         }
-    });           
-    
+    });
+
 }
 
 /**
- * node conditions 
+ * node conditions
  * Available conditions defined in behavior tree
  *
  * @param  {Object} action
@@ -117,7 +128,7 @@ controlRackNodes.conditions = function(condition) {
                 pauseButton.clicked = false;
             }
             return b3.FAILURE;
-            
+
         }
     });
     condition('IsPlayClicked', {
@@ -139,9 +150,9 @@ controlRackNodes.conditions = function(condition) {
                 playButton.clicked = false;
             }
             return b3.FAILURE;
-            
+
         }
-    });    
+    });
     condition('IsFullScreenClicked', {
         tick: function(tick) {
             fullScreen.b3 = b3;
@@ -162,9 +173,9 @@ controlRackNodes.conditions = function(condition) {
                 fullScreen.clicked = false;
             }
             return b3.FAILURE;
-            
+
         }
-    }); 
+    });
     condition('IsCCClicked', {
         tick: function(tick) {
             cc.b3 = b3;
@@ -185,9 +196,9 @@ controlRackNodes.conditions = function(condition) {
                 cc.clicked = false;
             }
             return b3.FAILURE;
-            
+
         }
-    });  
+    });
     condition('IsMuteClicked', {
         tick: function(tick) {
             muteoff.b3 = b3;
@@ -210,7 +221,7 @@ controlRackNodes.conditions = function(condition) {
                 muteoff.clicked = false;
             }
             return b3.FAILURE;
-            
+
         }
     });
     condition('IsUnMuteClicked', {
@@ -235,8 +246,7 @@ controlRackNodes.conditions = function(condition) {
                 muteoff.clicked = false;
             }
             return b3.FAILURE;
-            
-        }
-    });           
-}
 
+        }
+    });
+}

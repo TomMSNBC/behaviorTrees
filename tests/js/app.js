@@ -6,11 +6,11 @@ var mainAi = {};
 
 var sim2 = function(ai) {
 	var lucky = {
-	    memory:  new b3.Blackboard()
+		memory:  new b3.Blackboard()
 	};
 	lucky.memory.set('name', 'Rack');
 	ai.tick(lucky, lucky.memory);
-}
+};
 
 
 function go(ai) {
