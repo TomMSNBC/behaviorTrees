@@ -40,39 +40,9 @@ video2.alpha = 1;
 
 
 
-sliceWidth = 83;
-sliceHeight = 60;
-vidWidth = 498;
-vidHeight = 360;
-nSlices = 36;
-
-
-sliceContainer = new createjs.Container();
-  xs = 0;
-  ys = 0;
-  for (var i = 0; i < nSlices; i++) {
-    let slice = new createjs.Bitmap(videoDom);
-    slice.sourceRect = new createjs.Rectangle(xs, ys, xs+sliceWidth, ys+sliceHeight);
-    //slice.sourceRect = new createjs.Rectangle(video2.width/sliceCount, 0, 0, video2.height/sliceCount);
-    //slice.cache(0, 0, sliceWidth, imgHeight);
-    //slice.filters = [new createjs.ColorMatrixFilter(new createjs.ColorMatrix())];
-    slice.x = 100+xs;
-    slice.y = ys;
-    slice.scaleX = 1.39;
-    sliceContainer.addChild(slice);
-    xs += sliceWidth+40;
-    if (xs > vidWidth) {
-      xs = 0;
-      ys += ys+sliceHeight;
-    }
-
-  }
-sliceContainer.visible = false;
-
-
 //videoDom.pause();
 stage.addChild(video2);
-stage.addChild(sliceContainer);
+
 }
 
 function drawCounters() {

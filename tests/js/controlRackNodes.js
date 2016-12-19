@@ -84,17 +84,6 @@ controlRackNodes.actions = function(action) {
             let name = tick.blackboard.get('name');
             //console.log(name + ' updating duration');
             currentTime.text = videoDom.currentTime;
-            // fun
-            if (videoDom.currentTime > 141) {
-              sliceContainer.visible = true;
-                for (var i = 0; i < nSlices; i++) {
-                    var slice = sliceContainer.getChildAt(i);
-                    console.log(slice.yup);
-                    slice.y += Math.random(1)*28;
-                    slice.x += (10-Math.random(1)*17);
-                }
-            }
-
             return b3.SUCCESS;
         }
     });
