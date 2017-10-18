@@ -56,8 +56,6 @@ treeLoader.init = function (filename, aiName, nodes, callback) {
       })
       .fail((jqxhr, textStatus, error) => {
         const err = {
-          url: playlistUrl,
-          status: textStatus,
           error,
         };
         console.error(err);

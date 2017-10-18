@@ -1,5 +1,5 @@
 // stage.js
-
+/* global document */
 
 let playButton;
 let pauseButton;
@@ -13,15 +13,7 @@ let videoElement;
 var videoDom;
 var currentTime;
 
-function start() {
-  drawVideo();
-  drawContentControls();
-  drawCounters();
-  loadTree();
-}
-
 function drawVideo() {
-// var videoDom = $('<video width="320" height="240" autoplay><source src="/tests/video/round.mp4" type="video/mp4"></video>').appendTo(document.body)[0];
   videoDom = document.createElement('video');
   videoDom.src = '/tests/video/round.mp4';
   videoDom.autoplay = false;
@@ -32,18 +24,23 @@ function drawVideo() {
 
 function drawCounters() {
   currentTime = document.getElementById('currentTime');
-  currentTime.innerHTML = "0.00";
-  // currentTime = new createjs.Text("0:00", "10px Arial", "#FFF");
-  // stage.addChild(currentTime);
+  currentTime.innerHTML = '0.00';
 }
 
 function drawContentControls() {
   playButton = document.getElementById('playButton');
   pauseButton = document.getElementById('pauseButton');
-  pauseButton.style.display = "none";
+  pauseButton.style.display = 'none';
   bar = {};
   fullScreen = {};
   cc = {};
   muteon = {};
   muteoff = {};
+}
+
+function start() {
+  drawVideo();
+  drawContentControls();
+  drawCounters();
+  loadTree();
 }
